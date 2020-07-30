@@ -1,0 +1,261 @@
+@import "fonts";
+@import "mixin";
+
+$font-base-color: #0b3c4d;
+$font-accent-color : #1baae1;
+$height-accordion-item: 180px;
+
+body {
+  font: 14px/1.2em Alegreya-Bold, Serif;
+  color: $font-base-color;
+  background: #d1eef9 url("../images/shadow.png") center center no-repeat;
+  background-size:  cover;
+  @include small-desktop {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 10px;
+  text-align: center;
+  @include tablet {
+    margin-top: 0;
+    text-align: left;
+    white-space: nowrap;
+    padding-left: 120px;
+    font-size: 34px;
+  }
+  @include small-desktop {
+    font-size: 50px;
+  }
+  @include desktop {
+    padding-left: 160px;
+    font-size: 58px;
+  }
+  @media screen and (min-width: 1280px ){
+    padding-left: 120px;
+  }
+  @media screen and (min-width: 1520px ){
+    padding-left: 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 0.8em;
+  text-transform: uppercase;
+  @include small-desktop {
+    font-size: 28px;
+  }
+  @include desktop {
+    font-size: 35px;
+  }
+}
+h3 {
+  font-size: 22px;
+  padding: 0 15px;
+  @include small-desktop {
+    font-size: 26px;
+  }
+  @include desktop {
+    font-size: 30px;
+  }
+}
+h1,h3,h5 {
+  line-height: 1.2em;
+}
+h4 {
+  font-size: 18px;
+  @include desktop {
+    font-size: 20px;
+  }
+}
+h5 {
+  font-size: 16px;
+}
+
+.header {
+  text-align: center;
+  padding-top: 25px;
+  @include tablet {
+    text-align: left;
+    height: 95px;
+  }
+  @include desktop {
+    height: 135px;
+  }
+  img {
+    height: 150px;
+    @include desktop {
+      padding-left: 25px;
+      height: auto;
+    }
+  }
+}
+button, select, input {
+  cursor: pointer;
+}
+.container {
+  @include desktop {
+    max-width: 1110px;
+  }
+}
+.relative {
+  position: relative;
+}
+.emphasized {
+  color: $font-accent-color;
+  white-space: nowrap;
+}
+.hidden-on-mobile {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+.visible-on-mobile {
+  display: block;
+  @include  tablet {
+    display: none;
+  }
+}
+.image-center {
+    display: block;
+    margin: 0 auto;
+}
+.features {
+  margin-top: 15px;
+  @include tablet {
+    margin-top: 50px;
+  }
+  @include desktop {
+    margin-top: 95px;
+  }
+
+}
+.feature {
+  &:after {
+    @include line;
+  }
+  &__title {
+    color: $font-accent-color;
+    padding-top: 10px;
+    @include tablet {
+      padding: 10px 10px 10px 0;
+    }
+  }
+  &__desc {
+    padding: 10px 0;
+  }
+}
+
+.reviews {
+  img { 
+    @media screen and (max-width: 767px){
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+    @include tablet {
+      width: 130px;
+    }
+    @include desktop {
+      width: auto;
+    }
+  }
+  &__title {
+    text-align: center;
+    padding: 30px 0;
+    @include desktop {
+      padding: 40px 0;
+    }
+  }
+}
+
+.contacts {
+  &__title {
+    line-height: 1.25em;
+    padding: 15px 0 25px;
+    @include desktop {
+      padding: 10px 0 8px;
+    }
+  }
+  &__logos {
+    padding: 0 15px;
+    h2 {
+      margin-right: 20px;
+    }
+    &:after {
+      margin: 10px  0;
+      @include line;
+    }
+  }
+  &__text {
+    max-width: 565px;
+    font-size: 18px;
+    padding-bottom: 30px;
+    @include desktop {
+      font-size: 21px;
+    }
+  }
+  .logo {
+    height: 100px;
+    @include small-desktop {
+      height: 120px;
+    }
+    @include desktop {
+      height: auto;
+    }
+  }
+  .logo-blue {
+    height: 24px;
+    @include small-desktop {
+      height: 34px;
+    }
+    @include desktop {
+      height: 47px;
+    }
+  }
+}
+
+.footer {
+  padding: 15px 0;
+  img {
+    @media screen and (max-width: 991px) {
+      height: 30px;
+      margin-left: 25px;
+    }
+  }
+}
+
+::-webkit-scrollbar-button {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #f8b117;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f8b117;
+}
+
+::-webkit-resizer {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 0px
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}

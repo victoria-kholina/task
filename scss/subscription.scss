@@ -1,0 +1,80 @@
+@import "fonts";
+@import "mixin";
+
+.subscription {
+  &-group {
+    border-bottom: 1px solid #fff;
+    padding: 13px 0;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      @include desktop {
+        width: 265px;
+      }
+    }
+    span {
+      font-family: Montserrat-Medium, monospace;
+    }
+    &__input {
+      display: inline-block;
+      position: relative;
+      width: 10px;
+      height: 10px;
+      input {
+        position: absolute;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        z-index: 1;
+        &:checked ~ .checkmark {
+          background-color: #8c8c8c;
+        }
+        &:checked ~ .checkmark:after {
+          display: block;
+        }
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #8c8c8c;
+        background-color: #fff;
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+          left: 2px;
+          bottom: 2px;
+          width: 4px;
+          height: 7px;
+          border: solid white;
+          border-width: 0 1.5px 1.5px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &__label {
+      display: inline-block;
+      font-size: 13px;
+      margin-left: 2px;
+      @include tablet {
+        width: 140px;
+      }
+      @include small-desktop {
+        width: auto;
+      }
+      @include desktop {
+        font-size: 14px;
+      }
+      span {
+        display: block;
+        font-size: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import "fonts";
+@import "mixin";
+
+.sidebar {
+  font: 13px/1.2em Montserrat-Bold, monospace;
+  background-color: #f8b117;
+  color: #fff;
+  padding:  15px 20px 55px;
+  width: 100%;
+  transition: 10s easy-in-out;
+  @include tablet {
+    width: 200px;
+  }
+  @include small-desktop {
+    width: 295px;
+  }
+  @include desktop {
+    padding:  25px 30px 55px;
+  }
+  &-image {
+    display: block;
+    margin-top: 30px;
+    @include  tablet {
+      height: 190px;
+      margin-top: -80px;
+    }
+    @include desktop {
+      height: auto;
+    }
+  }
+  &__title {
+    line-height: 1.4em;
+    padding-bottom: 20px;
+    span {
+      font-size: 20px;
+      display: block;
+      color: #0b3c4d;
+      @include desktop {
+        font-size: 25px;
+      }
+    }
+  }
+  &__text-item {
+    &>.regural-font {
+      padding: 8px 0 12px;
+      @include desktop {
+        padding: 18px 0 22px;
+      }
+      strong {
+        font-weight: 700;
+      }
+    }
+    &:before {
+      margin-bottom: 5px;
+      @include white-line;
+    }
+    span {
+      display: block;
+    }
+    h5 {
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+}
+
+#sidebar {
+  padding-bottom: 15px;
+  &>.image-center {
+    margin-top: -45px;
+  }
+}
+
+.fixed-elem {
+  @include tablet {
+    position: fixed;
+    width: auto;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar-track {
+      background-color: #f8b117;
+    }
+    &::-webkit-resizer {
+      background-image: url('');
+      background-repeat: no-repeat;
+      width: 0;
+      height: 0;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+}
+.regural-font {
+  font-family: Montserrat-Regular, monospace;
+}
+.price-line-through {
+  margin-right: -10px;
+  padding: 7px 5px 0;
+  border-bottom: 2px solid #fff;
+  line-height: 0;
+  white-space: nowrap;
+}
+.price-line-through,
+.price {
+  float: right;
+}
+.price {
+  padding: 20px 0 17px;
+  font-family: Montserrat-Medium, monospace;
+  font-size: 22px;
+}
+
