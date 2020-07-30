@@ -16,13 +16,14 @@
   }
   @include desktop {
     padding:  25px 30px 55px;
+    margin-left: 10px;
   }
   &-image {
     display: block;
     margin-top: 30px;
     @include  tablet {
       height: 190px;
-      margin-top: -80px;
+      margin-top: -88px;
     }
     @include desktop {
       height: auto;
@@ -109,7 +110,7 @@
   float: right;
 }
 .price {
-  padding: 20px 0 17px;
+  padding: 17px 0 14px;
   font-family: Montserrat-Medium, monospace;
   font-size: 22px;
 }
